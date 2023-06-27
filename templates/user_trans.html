@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+     rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+
+     crossorigin="anonymous">
+	 
+	 <!-- Boxicons CDN Link -->
+	 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+ 
+	 <!-- Bootstrap CSS -->
+	 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+	  rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+	  crossorigin="anonymous">
+	 
+
+    <title>transac.</title>
+    <style>
+		@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600&display=swap');
+  
+		body {
+		  font-family: "Dosis", sans-serif;
+		  font-weight: 500;
+		}
+	  
+		h1,h2,h3,h4,h5,h6 {
+		  font-weight: 600;
+		  text-transform: uppercase;
+		}
+	  
+		a {
+		  font-weight: 600;
+		  text-transform: uppercase;
+		  font-size: 14px;
+		}
+	  
+		section {
+		  padding: 80px;
+		  padding-bottom: 80px;
+		}
+	  
+	  
+		#homepage h1 {
+		  font-weight: 600;
+		  letter-spacing: 2px;
+		}
+  
+		.btn {
+			padding: 14px 32px;
+			font-size: 14px;
+			font-weight: 600;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+		}
+		
+		.btn-primary {
+		  background-color: #FFBFBA ;
+		  border-color: #FFBFBA;
+		  border-radius: 100px;
+		}
+		
+		.btn-primary:hover {
+		  background-color: transparent;
+		  border-color: #FFBFBA;
+		} 
+		
+		.navbar {
+		  transition: all 0.4s ease;
+		}
+  
+		.sidebar .logo-details{
+		  height: 60px;
+		  width: 100%;
+		  display: flex;
+		  align-items: center;
+		}
+  
+		.sidebar .cart-box{
+		  height: 80px;
+		  width: 100%;
+		  display: flex;
+		  align-items: center;
+		}
+  
+		.about .row{
+		  display: flex;
+		  flex-wrap: wrap;
+		  gap: 1.5rem;
+		  text-align: center;
+		  align-items: center;
+		}
+	   
+	   .about .row .image{
+		  flex: 1 1 40rem;
+		}
+	   
+	   .about .row .image img{
+		  width: 40rem;
+		  border-radius: .5rem;
+		}
+	   
+	   .about .row .content{
+		  flex:1 1 40rem;
+		}
+	   
+	   .about .row .content h3{
+		  font-size: 3rem;
+		  color: var(--sub-color);
+		  text-transform: capitalize;
+		  margin-bottom: 1rem;
+		}
+	   
+		.about .row .content p{
+		  line-height: 2;
+		  padding: 1rem 0;
+		  font-size: 1.7rem;
+		  color: var(--sub-color);
+		}
+	   
+  
+		.about .row{
+		  display: flex;
+		  flex-wrap: wrap;
+		  gap: 1.5rem;
+		  text-align: center;
+		  align-items: center;
+		}
+	 
+		.about .row .image{
+		  flex: 1 1 40rem;
+		}
+	  
+		.about .row .image img{
+		  width: 40rem;
+		  border-radius: .5rem;
+		}
+	  
+		.about .row .content{
+		  flex:1 1 40rem;
+		}
+	  
+		.about .row .content h3{
+		  font-size: 3rem;
+		  color: var(--sub-color);
+		  text-transform: capitalize;
+		  margin-bottom: 1rem;
+		}
+	  
+		.about .row .content p{
+		  line-height: 2;
+		  padding: 1rem 0;
+		  font-size: 1.7rem;
+		  color: var(--sub-color);
+		}
+	  
+		.about .row.revers{
+		  flex-flow: row-reverse;
+		  margin: 3rem 0;
+		  flex-wrap: wrap;
+		}
+
+		.content-table{
+			border-collapse: collapse;
+			margin: 25px 0;
+			font-size: 0.9em;
+			min-width: 400px;
+			border-radius: 5px 5px 0 0;
+			overflow: hidden;
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+
+		}
+
+		.content-table thead tr{
+			background-color:  #FFBFBA;
+			color: #ffffff;
+			text-align: left;
+			font-weight: bold;
+			
+		}
+
+		.content-table th,
+		.content-table td{
+			padding: 12px 15px;
+		}
+
+		.content-table tbody tr{
+			border-bottom: 1px solid #dddddd;
+		}
+
+		.content-table tbody tr:nth-of-type(even){
+			background-color: #f3f3f3;
+		}
+
+		.content-table tbody tr:last-of-type{
+			border-bottom: 2px solid #FFBFBA;
+		}
+		
+			
+	</style>
+
+</head>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="75">
+
+	<!-- NAVBAR-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+		<div class="container">
+		  <div class="logo-details">
+			<i class='bx bxs-leaf'></i>
+		  </div>
+		  <a class="navbar-brand" href="#">Indoor Plants</a>
+		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav ms-auto">
+			  <li class="nav-item">
+				<a class="nav-link" href="homepage">Home</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="register">Register/Login</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="plant">Plants</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="guide">Guides</a>
+			  </li>
+			  <li class="nav-item">
+				<div class="user">
+				  <div class="user-icon"></div>
+				  <a class="nav-link" href="logout"><i class='bx bxs-user'></i></a>
+				</div>                
+			  </li>
+			  
+			</ul>
+		  </div>
+		</div>
+	</nav>    
+	<!---->
+    <section id="about" class="text-center">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 intro mx-auto">
+            
+              <div class="divider"></div>
+              
+            </div>
+          </div>
+        </div>
+    </section>
+
+<center>
+	<div class="container ">
+
+		{% if rows %}
+				<table class="content-table">
+					<thead class="thead-dark">
+						<tr>
+							<th scope="col">Sr.No</th>
+							<!--<th scope="col">Username</th>-->
+							<th scope="col">Proid</i></th> 
+							<th scope="col">Plant Name</th>
+							<th scope="col">Price</th>
+							<th scope="col">Delete Item</th>
+						</tr>
+						</thead>	
+						<tbody>
+							{% for row in rows %}
+							<tr class="active-row">
+								<th scope="row">{{loop.index}}</th>
+								<!-- <td>{{row[0]}}</td> -->
+								<td>{{row[2]}}</td>
+								<td>{{row[3]}}</td>
+								<!-- <td>{{row[3]}}</td> -->
+								<td><span>&#8377;</span>{{row[4]}}</td>
+								<td><form method="post" action="{{url_for('remove_plant', PROID=row[1])}}">
+									<button type="submit" class="bx bxs-trash">Delete</button></form></td> <!--Move from cart-->
+							</tr>
+							{% endfor %}
+						</tbody>
+						<tfoot>
+							<tr>
+							  <th id="total" colspan="3">Total :</th>
+							  <td>{{total}}</td>
+							  <td><form method="post" action="/poppage">
+								<button type="submit" class="shop">Buy now</button></form></td> 
+							</tr>
+						</tfoot>			
+												
+			    </table>
+		{% endif %} 
+
+	</div>
+</center>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+     crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" 
+     integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" 
+     crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" 
+     integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" 
+     crossorigin="anonymous">
+    </script>
+    
+	<script>
+        $scope.popUpFunction = function () {
+            var popup = document.getElementById("myPopup");
+            popup.classList.toggle("show");
+        }
+    </script>
+	
+</body>
+</html>

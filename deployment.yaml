@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+ kind: Deployment
+ metadata:
+   name: mysafe
+ spec:
+   replicas: 5
+   selector:
+     matchLabels:
+       app: houseplants
+   template:
+     metadata:
+       labels:
+         app: houseplants
+     spec:
+       containers:
+       - name: rapidapi
+         image: jp.icr.io/myplant/planthouse
+         imagePullPolicy: Always
+         ports:
+         - containerPort: 5000
